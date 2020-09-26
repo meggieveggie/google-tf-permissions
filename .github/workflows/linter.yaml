@@ -1,0 +1,12 @@
+name: terraform-lint
+
+on: [push, pull_request]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out code
+      uses: actions/checkout@master
+    - name: terraform-lint-with-diff
+      uses: alexnorell/terraform-lint@v1.0.0
